@@ -5,6 +5,8 @@
     "dependencies": {
         "@ant-design/icons": "^4.7.0",
         "antd": "^4.21.0",
+        "deep-equal": "^2.2.1",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
         "react-scripts": "5.0.1",
