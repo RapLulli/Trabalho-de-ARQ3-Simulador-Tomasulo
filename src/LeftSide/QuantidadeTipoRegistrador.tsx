@@ -40,7 +40,7 @@ const QuantidadeTipoRegistrador: React.FC<IProps> = () => {
   useEffect(onArrTipoRegistradorChanges, [arrTipoRegistrador.value]);
 
   return (
-    <Wrapper title="Quantidade tipo registrador">
+    <Wrapper title="Quantidade Tipo Registrador">
       {Object.keys(TipoRegistrador).map((i: any, ind: number) => (
         <div className="tipo-registrador" key={"tipo-registrador-" + ind}>
           <label>{i}</label>
@@ -73,11 +73,10 @@ const Wrapper = styled(Card)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 45%;
+  justify-content: flex-start;
+  position: relative;
+  height: 100%;
 
-  -webkit-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  -moz-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
   .tipo-registrador {
     display: flex;
     flex-direction: row;
@@ -87,5 +86,6 @@ const Wrapper = styled(Card)`
   }
   label {
     width: 45%;
+    font-weight: bold;
   }
 `;

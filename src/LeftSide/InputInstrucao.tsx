@@ -47,7 +47,7 @@ const InputInstrucao: React.FC<IProps> = ({ index }) => {
 
   return (
     <Wrapper>
-      <label style={{ marginRight: "12px" }}>Instr{index + 1}</label>
+      <label style={{ marginRight: "12px" }}>Inst{index + 1}</label>
       <Select
         style={{ width: "75px", marginRight: "2px" }}
         value={arrInstrucoes.value[index]?.nome ?? TipoInstrucao.Add}
@@ -70,7 +70,7 @@ const InputInstrucao: React.FC<IProps> = ({ index }) => {
       </Select>
       <Input
         disabled={confirmado}
-        placeholder="Reg Destino"
+        placeholder="Destino"
         value={arrInstrucoes.value[index]?.entrada1 ?? ""}
         onChange={(e) => {
           AssociarInstrucao(e.target.value, 1);
@@ -78,7 +78,7 @@ const InputInstrucao: React.FC<IProps> = ({ index }) => {
       />
       <Input
         disabled={confirmado}
-        placeholder="Reg Origem"
+        placeholder="Origem"
         value={arrInstrucoes.value[index]?.entrada2 ?? ""}
         onChange={(e) => {
           AssociarInstrucao(e.target.value, 2);
@@ -86,7 +86,7 @@ const InputInstrucao: React.FC<IProps> = ({ index }) => {
       />
       <Input
         disabled={confirmado}
-        placeholder="Reg Origem"
+        placeholder="Origem"
         value={arrInstrucoes.value[index]?.entrada3 ?? ""}
         onChange={(e) => {
           AssociarInstrucao(e.target.value, 3);

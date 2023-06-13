@@ -48,9 +48,6 @@ const Wrapper = styled(Card)`
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  -webkit-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  -moz-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
 `;
 
 const STabela = styled.table`

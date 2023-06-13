@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { IntrucaoContext } from "../App";
 import InputInstrucao from "./InputInstrucao";
 import { Instrucao1, Instrucao2 } from "./InstrucoesPreProntas";
+import BotoesConfimarResetar from "./BotoesConfimarResetar";
 
 const ListaInstrucoes: React.FC = () => {
   const { quantidadeInstrucoes, setQuantidadeInstrucoes, arrInstrucoes } =
@@ -37,17 +38,18 @@ const ListaInstrucoes: React.FC = () => {
 
   return (
     <Wrapper
-      title="Quantidade de instruções"
+      title="Quantidade de Instruções"
       bodyStyle={{ overflowY: "scroll" }}
     >
-      <div className="selecione-exemplo">
+      <div className="topo">
+        <BotoesConfimarResetar />
+      </div>
+      <div className="selecione">
         <Select defaultValue={0} onSelect={onSelectExemplo}>
-          <Select.Option value={0}>Ou selecione um exemplo</Select.Option>
+          <Select.Option value={0}>Selecione um exemplo</Select.Option>
           <Select.Option value={1}>Exemplo 1</Select.Option>
           <Select.Option value={2}>Exemplo 2</Select.Option>
         </Select>
-      </div>
-      <div className="qtd-instrucoes-wrapper">
         <div className="qtd-instrucoes">
           <Button
             onClick={() => {
@@ -79,16 +81,15 @@ const ListaInstrucoes: React.FC = () => {
           justifyContent: "center",
           alignContent: "center",
           alignItems: "center",
+          marginTop: 15,
         }}
       >
-        <Card
-          title="Lista de instruções"
-          type="inner"
-          style={{ width: "90%", alignSelf: "center" }}
-          // bodyStyle={{ width: '10%' }}
-        >
-          {GerarCampoInstrucoes()}
-        </Card>
+        <div style={{ textAlign: "center" }}>
+          <label style={{ fontWeight: "bold" }}>Lista de instruções</label>
+          <div style={{ width: "90%", alignSelf: "center" }}>
+            {GerarCampoInstrucoes()}
+          </div>
+        </div>
       </div>
     </Wrapper>
   );
@@ -105,22 +106,22 @@ const Wrapper = styled(Card)`
   align-items: center;
   justify-content: flex-start;
   margin-top: 15px;
-  -webkit-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  -moz-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
 
-  .selecione-exemplo {
+  .topo {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 15px;
   }
-  .qtd-instrucoes-wrapper {
+  .selecione {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    .qtd-instrucoes {
-      display: flex;
-      flex-direction: row;
-    }
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  .qtd-instrucoes {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
   }
 `;

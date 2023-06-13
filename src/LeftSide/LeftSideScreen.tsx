@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BotoesConfimarResetar from "./BotoesConfimarResetar";
 import CiclosPorInstrucao from "./CiclosPorInstrucao";
 import ListaInstrucoes from "./ListaInstrucoes";
 import QuantidadeTipoRegistrador from "./QuantidadeTipoRegistrador";
@@ -13,7 +12,6 @@ const LeftSideScreen: React.FC = () => {
         <CiclosPorInstrucao />
         <QuantidadeTipoRegistrador />
       </div>
-      <BotoesConfimarResetar />
     </Wrapper>
   );
 };

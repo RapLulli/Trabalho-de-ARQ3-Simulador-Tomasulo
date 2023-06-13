@@ -375,7 +375,14 @@ const AvancarInstrucoes: React.FC = () => {
 
   return (
     <Wrapper>
-      <Tag color={confirmado ? "processing" : "default"}>
+      <Tag
+        color={confirmado ? "processing" : "default"}
+        style={
+          !confirmado
+            ? { color: "lightgray", fontSize: 15 }
+            : { fontWeight: "bold", fontSize: 15 }
+        }
+      >
         Ciclo: {cicloAtual}
       </Tag>
       <Button

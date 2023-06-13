@@ -10,7 +10,7 @@ const CiclosPorInstrucao: React.FC<IProps> = () => {
   const { arrCicloPorInstrucao } = useContext(IntrucaoContext);
 
   return (
-    <Wrapper title="Ciclos por instrução">
+    <Wrapper title="Ciclos por Instrução">
       {Object.keys(TipoInstrucao).map((i: any, ind: number) => (
         <div className="ciclo-por-instrucao" key={"ciclo-por-instrucao-" + ind}>
           <label>{i}</label>
@@ -46,9 +46,6 @@ const Wrapper = styled(Card)`
   align-items: center;
   width: 45%;
 
-  -webkit-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  -moz-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
   .ciclo-por-instrucao {
     display: flex;
     flex-direction: row;
@@ -57,5 +54,6 @@ const Wrapper = styled(Card)`
   }
   label {
     width: 30%;
+    font-weight: bold;
   }
 `;

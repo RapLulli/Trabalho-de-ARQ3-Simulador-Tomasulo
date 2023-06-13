@@ -16,6 +16,7 @@ const BotoesConfimarResetar: React.FC = () => {
     setConfirmado,
     setCicloAtual,
     arrBufferReordenamento,
+    confirmado,
   } = useContext(IntrucaoContext);
 
   const onCliqueConfirmar = () => {
@@ -113,16 +114,19 @@ const BotoesConfimarResetar: React.FC = () => {
       <div className="Wrapper-bottoes">
         <div>
           <Button
-            style={{ marginRight: "10px" }}
-            // disabled={confirmado && cicloAtual > 0}
+            style={{
+              marginRight: "10px",
+            }}
             type={"primary"}
             onClick={() => onCliqueConfirmar()}
           >
-            Confirmar
+            {confirmado ? "Zerar" : "Confirmar"}
           </Button>
         </div>
         <div>
-          <Button onClick={() => onCliqueResetar()}>Resetar</Button>
+          <Button type={"default"} onClick={() => onCliqueResetar()}>
+            Resetar
+          </Button>
         </div>
       </div>
     </Wrapper>
@@ -132,13 +136,8 @@ const BotoesConfimarResetar: React.FC = () => {
 export default BotoesConfimarResetar;
 
 const Wrapper = styled.div`
-  position: absolute;
-  bottom: 20px;
   .Wrapper-bottoes {
     display: flex;
     flex-direction: row;
   }
-  -webkit-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  -moz-box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
-  box-shadow: 8px 7px 28px -17px rgba(29, 26, 71, 0.57);
 `;
