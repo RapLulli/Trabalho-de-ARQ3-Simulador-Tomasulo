@@ -38,7 +38,7 @@ Caso não abra um aba no browser localmente abra uma nova aba e digite `http://l
   <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/react/react-original.svg" width="40" height="40"/>
 </div>
 
-### Imagens Do Simulador
+# Imagens Do Simulador
 
 ![image](https://github.com/RapLulli/Trabalho-de-ARQ3-Simulador-Tomasulo/assets/81873821/044f0926-2ec4-44f5-bc6e-23b2183bcccf)
 ![image](https://github.com/RapLulli/Trabalho-de-ARQ3-Simulador-Tomasulo/assets/81873821/7509de04-ad6a-4112-9b2d-6a555cbf654a)
